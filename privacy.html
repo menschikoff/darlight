@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darlight — Политика конфиденциальности / Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6; max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+    color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #161616; }
+    td, th { border-color: #333 !important; }
+    code { background: #242424 !important; }
+    hr { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.25rem; }
+  h3 { font-size: 1.05rem; margin-top: 1.75rem; }
+  .date { opacity: .65; font-size: .9rem; }
+  .lead { font-size: 1.05rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #ddd; padding: .5rem .6rem; text-align: left; font-size: .95rem; }
+  code { background: #f3f3f3; padding: .1rem .3rem; border-radius: 3px; font-size: .9em; word-break: break-all; }
+  hr { border: 0; border-top: 1px solid #ddd; margin: 3rem 0; }
+  ul { padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+
+<h1>Darlight — Политика конфиденциальности</h1>
+<p class="date">Дата вступления в силу: 5 августа 2026</p>
+
+<h2>Коротко</h2>
+<p class="lead">Darlight не собирает, не передаёт и не хранит никаких персональных данных.
+Приложение вообще не обращается к интернету.</p>
+
+<h3>Какие данные обрабатываются</h3>
+<p>Приложение сохраняет только ваши настройки, и только на вашем компьютере:</p>
+<table>
+  <tr><th>Что</th><th>Где хранится</th></tr>
+  <tr><td>Включено ли автопереключение</td><td><code>%LOCALAPPDATA%\Darlight\settings.json</code></td></tr>
+  <tr><td>Время начала светлой и тёмной темы</td><td>там же</td></tr>
+  <tr><td>Выбранный язык интерфейса</td><td>там же</td></tr>
+  <tr><td>Включён ли запуск при входе в систему</td><td>там же</td></tr>
+</table>
+<p>Кроме того, приложение изменяет системные настройки темы текущего пользователя в реестре Windows:</p>
+<ul>
+  <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</code> — собственно переключение светлой и тёмной темы;</li>
+  <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code> — запись для автозапуска, если вы его включили.</li>
+</ul>
+<p>Эти данные не являются персональными и никуда не отправляются.</p>
+
+<h3>Чего приложение НЕ делает</h3>
+<ul>
+  <li>не подключается к интернету и не передаёт данные на какие-либо серверы;</li>
+  <li>не собирает статистику, телеметрию и сведения об использовании;</li>
+  <li>не показывает рекламу;</li>
+  <li>не читает ваши файлы, переписку, историю браузера, буфер обмена;</li>
+  <li>не определяет ваше местоположение;</li>
+  <li>не передаёт ничего третьим лицам.</li>
+</ul>
+
+<h3>Внешние ссылки</h3>
+<p>В окне настроек есть ссылка «Поддержать разработчика». При нажатии открывается браузер
+со страницей платёжного сервиса Polar. Переход добровольный. На этой странице действует
+политика конфиденциальности Polar, а не наша; приложение не участвует в обработке платежа
+и не получает сведений о плательщике.</p>
+
+<h3>Удаление данных</h3>
+<p>Удалите папку <code>%LOCALAPPDATA%\Darlight</code> — это все данные, которые создаёт приложение.
+При удалении приложения через систему данные удаляются вместе с ним. Настройки темы Windows
+останутся в том состоянии, в котором были на момент удаления.</p>
+
+<h3>Дети</h3>
+<p>Приложение не предназначено специально для детей и не собирает данные ни о ком.</p>
+
+<h3>Изменения</h3>
+<p>При изменении политики будет обновлена дата в начале документа.</p>
+
+<h3>Контакт</h3>
+<p>Вопросы по этой политике: <a href="mailto:a5346649017@gmail.com">a5346649017@gmail.com</a></p>
+
+<hr>
+
+<h1>Darlight — Privacy Policy</h1>
+<p class="date">Effective date: 5 August 2026</p>
+
+<h2>In short</h2>
+<p class="lead">Darlight does not collect, transmit, or store any personal data.
+The application does not access the internet at all.</p>
+
+<h3>What data is processed</h3>
+<p>The application stores only your settings, and only on your computer:</p>
+<table>
+  <tr><th>What</th><th>Where</th></tr>
+  <tr><td>Whether auto-switching is enabled</td><td><code>%LOCALAPPDATA%\Darlight\settings.json</code></td></tr>
+  <tr><td>Light and dark start times</td><td>same file</td></tr>
+  <tr><td>Selected interface language</td><td>same file</td></tr>
+  <tr><td>Whether to run at Windows startup</td><td>same file</td></tr>
+</table>
+<p>The application also changes the current user's Windows theme settings in the registry:</p>
+<ul>
+  <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</code> — the light/dark theme switch itself;</li>
+  <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code> — the autostart entry, if you enabled it.</li>
+</ul>
+<p>This data is not personal and is never sent anywhere.</p>
+
+<h3>What the application does NOT do</h3>
+<ul>
+  <li>does not connect to the internet or send data to any server;</li>
+  <li>does not collect analytics, telemetry, or usage data;</li>
+  <li>does not display advertising;</li>
+  <li>does not read your files, messages, browser history, or clipboard;</li>
+  <li>does not determine your location;</li>
+  <li>does not share anything with third parties.</li>
+</ul>
+
+<h3>External links</h3>
+<p>The settings window contains a “Support the developer” link. Clicking it opens your browser
+at a payment page hosted by Polar. Following the link is voluntary. That page is governed by
+Polar's privacy policy, not ours; the application takes no part in processing the payment and
+receives no information about the payer.</p>
+
+<h3>Deleting your data</h3>
+<p>Delete the folder <code>%LOCALAPPDATA%\Darlight</code> — that is all the data the application
+creates. Uninstalling the application removes this data as well. Your Windows theme settings
+remain as they were at the time of removal.</p>
+
+<h3>Children</h3>
+<p>The application is not directed at children and collects no data about anyone.</p>
+
+<h3>Changes</h3>
+<p>If this policy changes, the date at the top of this document will be updated.</p>
+
+<h3>Contact</h3>
+<p>Questions about this policy: <a href="mailto:a5346649017@gmail.com">a5346649017@gmail.com</a></p>
+
+</body>
+</html>
