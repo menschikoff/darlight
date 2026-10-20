@@ -32,14 +32,14 @@
 <body>
 
 <h1>Darlight — Политика конфиденциальности</h1>
-<p class="date">Дата вступления в силу: 5 августа 2026</p>
+<p class="date">Дата вступления в силу: 20 октября 2026</p>
 
 <h2>Коротко</h2>
-<p class="lead">Darlight не собирает, не передаёт и не хранит никаких персональных данных.
+<p class="lead">Darlight хранит настройки и небольшой диагностический журнал только на вашем компьютере.
 Приложение вообще не обращается к интернету.</p>
 
 <h3>Какие данные обрабатываются</h3>
-<p>Приложение сохраняет только ваши настройки, и только на вашем компьютере:</p>
+<p>Приложение сохраняет ваши настройки только на вашем компьютере:</p>
 <table>
   <tr><th>Что</th><th>Где хранится</th></tr>
   <tr><td>Включено ли автопереключение</td><td><code>%LOCALAPPDATA%\Darlight\settings.json</code></td></tr>
@@ -47,17 +47,24 @@
   <tr><td>Выбранный язык интерфейса</td><td>там же</td></tr>
   <tr><td>Включён ли запуск при входе в систему</td><td>там же</td></tr>
 </table>
+<p>Для диагностики сохраняется журнал в <code>%LOCALAPPDATA%\Darlight\Logs</code>:
+время с часовым поясом, идентификатор процесса, версия приложения, запуск/выход,
+расписание, причины и режимы переключений, события питания и сеанса Windows,
+повторы, длительность и результаты уведомлений оболочки, типы и числовые коды ошибок.
+Имена пользователя, пути и содержимое документов в журнал не записываются.
+Хранятся два файла — <code>darlight.log</code> и <code>darlight.previous.log</code>,
+каждый до 256 КиБ; при заполнении старые записи автоматически заменяются.</p>
 <p>Кроме того, приложение изменяет системные настройки темы текущего пользователя в реестре Windows:</p>
 <ul>
   <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</code> — собственно переключение светлой и тёмной темы;</li>
   <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code> — запись для автозапуска, если вы его включили.</li>
 </ul>
-<p>Эти данные не являются персональными и никуда не отправляются.</p>
+<p>Настройки и журнал никуда не отправляются автоматически.</p>
 
 <h3>Чего приложение НЕ делает</h3>
 <ul>
   <li>не подключается к интернету и не передаёт данные на какие-либо серверы;</li>
-  <li>не собирает статистику, телеметрию и сведения об использовании;</li>
+  <li>не отправляет разработчику статистику, телеметрию или журнал;</li>
   <li>не показывает рекламу;</li>
   <li>не читает ваши файлы, переписку, историю браузера, буфер обмена;</li>
   <li>не определяет ваше местоположение;</li>
@@ -71,15 +78,17 @@
 и не получает сведений о плательщике.</p>
 
 <h3>Удаление данных</h3>
-<p>Удалите папку <code>%LOCALAPPDATA%\Darlight</code> — это все данные, которые создаёт приложение.
-При удалении приложения через систему данные удаляются вместе с ним.</p>
+<p>Завершите Darlight и удалите папку <code>%LOCALAPPDATA%\Darlight</code>, чтобы удалить
+локальные настройки и журнал. Чтобы удалить только журнал, удалите вложенную папку
+<code>Logs</code>. При следующем запуске журнал создаётся заново.</p>
 <p><strong>Важно:</strong> выбранная тема Windows (светлая или тёмная) сохранится и после удаления
 приложения — она остаётся такой, какой Darlight установил её в последний раз. Это сделано намеренно:
 менять оформление системы в момент удаления программы было бы неожиданным для пользователя.
 Сменить тему можно в любой момент вручную: «Параметры → Персонализация → Цвета».</p>
 
 <h3>Дети</h3>
-<p>Приложение не предназначено специально для детей и не собирает данные ни о ком.</p>
+<p>Приложение не предназначено специально для детей. Описанное локальное хранение
+одинаково для всех пользователей.</p>
 
 <h3>Изменения</h3>
 <p>При изменении политики будет обновлена дата в начале документа.</p>
@@ -90,14 +99,14 @@
 <hr>
 
 <h1>Darlight — Privacy Policy</h1>
-<p class="date">Effective date: 5 August 2026</p>
+<p class="date">Effective date: 20 October 2026</p>
 
 <h2>In short</h2>
-<p class="lead">Darlight does not collect, transmit, or store any personal data.
+<p class="lead">Darlight stores settings and a small diagnostic log only on your computer.
 The application does not access the internet at all.</p>
 
 <h3>What data is processed</h3>
-<p>The application stores only your settings, and only on your computer:</p>
+<p>The application stores your settings only on your computer:</p>
 <table>
   <tr><th>What</th><th>Where</th></tr>
   <tr><td>Whether auto-switching is enabled</td><td><code>%LOCALAPPDATA%\Darlight\settings.json</code></td></tr>
@@ -105,17 +114,24 @@ The application does not access the internet at all.</p>
   <tr><td>Selected interface language</td><td>same file</td></tr>
   <tr><td>Whether to run at Windows startup</td><td>same file</td></tr>
 </table>
+<p>A diagnostic log in <code>%LOCALAPPDATA%\Darlight\Logs</code> records timestamps with
+time zone, process ID, application version, startup/exit, schedule, theme change
+reasons and modes, Windows power and session events, retries, shell notification
+durations and results, and error types and numeric codes. User names, paths and
+document contents are not logged. Two files are retained: <code>darlight.log</code>
+and <code>darlight.previous.log</code>, each up to 256 KiB; older entries are
+automatically replaced when the files fill up.</p>
 <p>The application also changes the current user's Windows theme settings in the registry:</p>
 <ul>
   <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</code> — the light/dark theme switch itself;</li>
   <li><code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run</code> — the autostart entry, if you enabled it.</li>
 </ul>
-<p>This data is not personal and is never sent anywhere.</p>
+<p>Settings and logs are never sent anywhere automatically.</p>
 
 <h3>What the application does NOT do</h3>
 <ul>
   <li>does not connect to the internet or send data to any server;</li>
-  <li>does not collect analytics, telemetry, or usage data;</li>
+  <li>does not send analytics, telemetry, or logs to the developer;</li>
   <li>does not display advertising;</li>
   <li>does not read your files, messages, browser history, or clipboard;</li>
   <li>does not determine your location;</li>
@@ -129,15 +145,17 @@ Polar's privacy policy, not ours; the application takes no part in processing th
 receives no information about the payer.</p>
 
 <h3>Deleting your data</h3>
-<p>Delete the folder <code>%LOCALAPPDATA%\Darlight</code> — that is all the data the application
-creates. Uninstalling the application removes this data as well.</p>
+<p>Exit Darlight and delete <code>%LOCALAPPDATA%\Darlight</code> to remove local settings
+and logs. To remove only the logs, delete its <code>Logs</code> subfolder.
+Logging resumes on the next launch.</p>
 <p><strong>Please note:</strong> your Windows theme setting (light or dark) remains after the
 application is uninstalled — it stays exactly as Darlight last set it. This is deliberate: changing
 your system appearance at the moment you remove a program would be unexpected. You can change it at
 any time in Settings → Personalization → Colors.</p>
 
 <h3>Children</h3>
-<p>The application is not directed at children and collects no data about anyone.</p>
+<p>The application is not directed at children. The local storage described above
+applies equally to all users.</p>
 
 <h3>Changes</h3>
 <p>If this policy changes, the date at the top of this document will be updated.</p>
